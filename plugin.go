@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"github.com/fsnotify/fsnotify"
 	pluginapi "k8s.io/kubernetes/pkg/kubelet/apis/deviceplugin/v1beta1"
-	"github.com/qnib/k8-device-plugin/lib"
+	"github.com/qnib/k8s-device-plugin/lib"
 )
 
 func main() {

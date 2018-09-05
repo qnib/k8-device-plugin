@@ -32,9 +32,9 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/qnib/k8-device-plugin"
-  packages = ["lib"]
-  revision = "08aa5cad4360a7553f3121437d146e093bf42d94"
+  name = "github.com/google/gousb"
+  packages = ["."]
+  revision = "92967a7d1098e3bc2a1cd0fcb652ca3c331a4419"
 
 [[projects]]
   branch = "master"
@@ -125,6 +125,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "949212e4acf453fd6562f56c51299c147d5d43a4a2b03994bdcef38d1ec72ab9"
+  inputs-digest = "38445d5fc12c2e5cf688c6ba19314fe747022ce48ec4114743192fc2506171e4"
   solver-name = "gps-cdcl"
   solver-version = 1

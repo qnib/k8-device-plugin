@@ -1,4 +1,4 @@
-package qniblib // import "github.com/qnib/k8-device-plugin/lib"
+package qniblib
 
 import (
 	pluginapi "k8s.io/kubernetes/pkg/kubelet/apis/deviceplugin/v1beta1"
@@ -42,12 +42,16 @@ func NewQnibDevicePlugin() *QnibDevicePlugin {
 }
 
 
-
 func GetDevices() []*pluginapi.Device {
-	devs, err := getUsbDevices()
+	devs, err := getNvidiaDevices()
 	if err != nil {
 		devs = []*pluginapi.Device{}
 	}
+	strDevs := []string{}
+	for _, d := range devs {
+		strDevs = append(strDevs, d.ID)
+	}
+	log.Printf("Devices found: %s\n", strings.Join(strDevs, ","))
 	return devs
 }
 
