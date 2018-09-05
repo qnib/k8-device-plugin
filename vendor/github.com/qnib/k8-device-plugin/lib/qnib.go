@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	resourceName           = "qnib.org/usb"
+	resourceName           = "qnib.org/gpu"
 	serverSock             = pluginapi.DevicePluginPath + "qnib.sock"
 	envDisableHealthChecks = "DP_DISABLE_HEALTHCHECKS"
 )
@@ -41,13 +41,12 @@ func NewQnibDevicePlugin() *QnibDevicePlugin {
 	}
 }
 
-
-
 func GetDevices() []*pluginapi.Device {
-	devs, err := getUsbDevices()
-	if err != nil {
-		devs = []*pluginapi.Device{}
-	}
+	var devs []*pluginapi.Device
+	devs = append(devs, &pluginapi.Device{
+		ID:     "1",
+		Health: pluginapi.Healthy,
+	})
 	return devs
 }
 

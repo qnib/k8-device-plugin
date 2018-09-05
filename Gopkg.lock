@@ -32,6 +32,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/qnib/k8-device-plugin"
+  packages = ["lib"]
+  revision = "08aa5cad4360a7553f3121437d146e093bf42d94"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -119,6 +125,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ec2e5d656c1aff39ca1735f7b5ad74936295ea16ab340e0722e253b223fba5b2"
+  inputs-digest = "949212e4acf453fd6562f56c51299c147d5d43a4a2b03994bdcef38d1ec72ab9"
   solver-name = "gps-cdcl"
   solver-version = 1
